@@ -3,7 +3,7 @@
     {
         private static $dsn = "mysql:host=localhost;dbname=test";
         private static $user = 'yamada';
-        private static $password = 'saizeriya';
+        private static $password = 'xxxxxxx';
         private static $options = array();
         
         public static function connect(){
