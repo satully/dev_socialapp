@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<title>互換性ヘルパ : CodeIgniter ユーザガイド 日本語版</title>
+
+<style type='text/css' media='all'>@import url('../userguide.css');</style>
+<link rel='stylesheet' type='text/css' media='all' href='../userguide.css' />
+
+<script type="text/javascript" src="../nav/nav.js"></script>
+<script type="text/javascript" src="../nav/prototype.lite.js"></script>
+<script type="text/javascript" src="../nav/moo.fx.js"></script>
+<script type="text/javascript" src="../nav/user_guide_menu.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv='expires' content='-1' />
+<meta http-equiv= 'pragma' content='no-cache' />
+<meta name='robots' content='all' />
+<meta name='author' content='ExpressionEngine Dev Team' />
+<meta name='description' content='CodeIgniter User Guide' />
+
+</head>
+<body>
+
+<!-- START NAVIGATION -->
+<div id="nav"><div id="nav_inner"><script type="text/javascript">create_menu('../');</script></div></div>
+<div id="nav2"><a name="top"></a><a href="javascript:void(0);" onclick="myHeight.toggle();"><img src="../images/nav_toggle_darker.jpg" width="154" height="43" border="0" title="Toggle Table of Contents" alt="Toggle Table of Contents" /></a></div>
+<div id="masthead">
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+<tr>
+<td><h1>CodeIgniter ユーザガイド 日本語版 Version 1.7.2</h1></td>
+<td id="breadcrumb_right"><a href="../toc.html">目次ページ </a></td>
+</tr>
+</table>
+</div>
+<!-- END NAVIGATION -->
+
+<!-- START BREADCRUMB -->
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%">
+<tr>
+<td id="breadcrumb">
+<a href="http://codeigniter.com/">CodeIgniter Home</a> &nbsp;&#8250;&nbsp;
+<a href="../index.html">ユーザガイド Home</a> &nbsp;&#8250;&nbsp;
+互換性ヘルパ
+</td>
+<td id="searchbox"><form method="get" action="http://www.google.com/search"><input type="hidden" name="as_sitesearch" id="as_sitesearch" value="codeigniter.jp/user_guide_ja/" />ユーザガイドを検索&nbsp; <input type="text" class="input" style="width:200px;" name="q" id="q" size="31" maxlength="255" value="" />&nbsp;<input type="submit" class="submit" name="sa" value="Go" /></form></td>
+</tr>
+</table>
+<!-- END BREADCRUMB -->
+
+<br clear="all" />
+
+<!-- START CONTENT -->
+<div id="content">
+
+
+<h1>互換性ヘルパ</h1>
+
+<p>互換性ヘルパファイルには、PHP 5でしか実装されていないネイティブな関数と定数を、PHP 4でも実行できるものが含まれています。これを使うことでPHP 4にしか対応していないサーバー上のアプリケーションでも、PHP 5のネイティブ関数を使うことができるようになります。この様な場合は<a href="../general/autoloader.html">オートロード</a>で互換性ヘルパが常にロードされるようにすることで、コントローラ毎にこのヘルパをロードする必要が無くなります。</p>
+
+<p class="important"><strong>メモ:</strong> 一部の互換性のある関数は、CodeIgniterのネイティブなCompat.phpファイル内にあります。これらの関数はこのヘルパをロードしなくても使えます。互換性の必要な関数は、CodeIgniterのコアが必要とするかどうかでこのファイルと互換性ヘルパ内に別々に置かれていて、フレームワークが必要とするものだけが最初にロードされます。こうすることで、互換性ヘルパをロードして追加の関数をロードするかどうかはあなた次第になります。</p>
+	
+<h2>このヘルパのロード</h2>
+
+<p>このヘルパは以下のコードでロードします:</p>
+<code>$this->load->helper('compatibility');</code>
+
+<h2>扱える定数</h2>
+<p>以下の定数を扱うことができます:</p>
+
+<h3>PHP_EOL</h3>
+<p>現在のOSにあったnewlineの文字です。例)Windowsでは "\r\n", *nix では"\n".
+
+<h2>扱える関数</h2>
+<p>以下の関数を扱うことができます (詳細はリンクにあるPHPドキュメントを見てください):</p>
+
+<h3><a href="http://php.net/manual/ja/function.file-put-contents.php">file_put_contents()</a> - 第4引数の<var>$context</var>はサポートされていません。</h3>
+
+<h3><a href="http://php.net/manual/ja/function.fputcsv.php">fputcsv()</a></h3>
+
+<h3><a href="http://php.net/manual/ja/function.http-build-query.php">http_build_query()</a></h3>
+
+<h3><a href="http://php.net/manual/ja/function.str-ireplace.php">str_ireplace()</a> - 第4引数の<var>$count</var>がPHP 4では必須のためサポートされていません。</h3>
+
+<h3><a href="http://php.net/manual/ja/function.stripos.php">stripos()</a></h3>
+
+</div>
+<!-- END CONTENT -->
+
+<div id="footer">
+<p>
+前のトピック:&nbsp;&nbsp;<a href="array_helper.html">配列ヘルパ</a>
+&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;
+<a href="#top">ページの先頭</a>&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;
+<a href="../index.html">ユーザーガイド Home</a>&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;
+次のトピック:&nbsp;&nbsp;<a href="cookie_helper.html">クッキーヘルパ</a>
+</p>
+<p><a href="http://codeigniter.com">CodeIgniter</a> &nbsp;&middot;&nbsp; Copyright &#169; 2006-2009 &nbsp;&middot;&nbsp; <a href="http://ellislab.com/">Ellislab, Inc.</a><br />Japanese Translation: <a href="http://codeigniter.jp/">CodeIgniter Users Group in Japan</a></p>
+</div>
+
+</body>
+</html>

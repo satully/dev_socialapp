@@ -1,0 +1,14 @@
+CodeIgniter User Guide Japanese Edition
+
+CodeIgniter Users Group in Japan, Japanese Translation Team
+
+Versin 1.7.2
+  * cilab
+  * kenh
+  * Kenji Suzuki <kenji@codeigniter.jp>
+  * panther-king
+
+Version 1.6.3
+  * Kenji Suzuki <kenji@codeigniter.jp>
+  * Kenichi Ando <ando@codeigniter.jp>
+
